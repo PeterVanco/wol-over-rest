@@ -21,13 +21,13 @@ When running `Home assistant` (or other service) in Docker without `--net=host`,
     image: petervanco/wol-over-rest:latest
     network_mode: host
     environment:
-      PORT: 8124
+      PORT: 3000
       TOKEN: 123xyz456abc
       DEBUG: "true"
 ```
 
 **Supported environment variables:**
-* `PORT` (optional, default 3000) - target MAC address in format: `11:11:11:11:11:11`
+* `PORT` (optional, default 3000) - the port to listen on
 * `TOKEN` (optional, default null) - authorization token used during container startup. If the token in request does not match the configured one, response code is 403
 * `DEBUG` (optional, default false) - prints the configuration values during startup
 
